@@ -34,11 +34,11 @@ func buscaCep(url string, ch chan<- string, apiName string) {
 		return
 	}
 
-	if apiName == "ViaCEP" {
-		time.Sleep(time.Millisecond * 750)
-	}
-
-	//time.Sleep(time.Millisecond * 1100)
+	// As informações abaixo foram utilizadas para testar as três hipóteses previstas
+	// if apiName == "ViaCEP" {
+	//  	time.Sleep(time.Millisecond * 750)
+	// }
+	// time.Sleep(time.Millisecond * 1100)
 
 	client := &http.Client{}
 	resp, err := client.Do(req)
